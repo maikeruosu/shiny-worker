@@ -2,12 +2,13 @@
 
 set -e  # エラーが発生したらスクリプトを停止
 
+echo "gitを事前にダウンロード"
 echo "🔧 Raspberry Pi に joycontrol をセットアップ中..."
 
 # 1. 必要なパッケージをインストール
 echo "📦 必要なパッケージをインストール中..."
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y python3-pip git python3-dbus libhidapi-hidraw0 libbluetooth-dev bluez
+sudo apt install -y python3-pip python3-dbus libhidapi-hidraw0 libbluetooth-dev bluez
 
 # 2. joycontrol / joycontrol-pluginloader をインストール
 echo "🎮 joycontrol をインストール中..."
